@@ -43,6 +43,7 @@ h1 {
     margin-left: 5%;
     float: left;
     width: 50%;
+    height: 430px;
     border-top: 1px solid black;
     border-left: 1px solid black;
     border-bottom: 1px solid black;
@@ -53,7 +54,7 @@ h1 {
     float: left;
     width: 40%;
     border: 1px solid black;
-    height: 410px;
+    height: 430px;
     background-color: lightgray;
 }
 
@@ -87,5 +88,11 @@ h1 {
 
 .textarea {
     width: 50%;
-    height: 59%;
+    height: 55%;
+}
+
+#submit {
+    float: right;
+    margin-right: 4%;
+    margin-top: 3%;
 }
