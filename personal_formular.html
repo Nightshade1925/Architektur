@@ -16,7 +16,7 @@
         </nav><br>
         <h1>Personaldaten erfassen</h1>
         <div class="outermostbox">
-            <form>
+            <form action="add_data.php" method="POST">
                 <div id="leftbox">
                     <label class="boxheader">Personaldaten</label><br>
 
@@ -46,17 +46,17 @@
                     <label class="boxheader">Firmadaten</label>
 
                     <label for="Abteilung" class="label">Abteilung:</label>
-                    <select name="Abteilung" id="abteilung" class="dropdown">
+                    <select name="abteilung" id="abteilung" class="dropdown">
                         <option value="Produktion">TBD</option>
                     </select><br>
 
                     <label for="Berufsbezeichnung" class="label">Berufsbezeichnung:</label>
-                    <select name="Berufsbezeichnung" id="berufsbezeichnung" class="dropdown">
+                    <select name="berufsbezeichnung" id="berufsbezeichnung" class="dropdown">
                         <option value="Informatik">TBD</option>
                     </select><br>
 
                     <label for="Berufsbeschreibung" class="label">Berufsbeschreibung:</label>
-                    <textarea class="textarea"></textarea><br>
+                    <textarea class="textarea" name="berufsbeschreibung"></textarea><br>
                     <input type="submit" id="submit">
                 </div>
 
