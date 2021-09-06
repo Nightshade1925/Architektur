@@ -1,10 +1,10 @@
 <?php
     $user = "root";
     $pass = "";
-    $server = "localhost";
+    $server = "localhost:3307";
     $database = "db_m151";
-    $driver = "MySQL ODBC 8.0 Unicode Driver";
-    $connection = "DRIVER = $driver; SERVER=$server; DATABASE=$database";
+   # $driver = "MySQL ODBC 8.0 Unicode Driver";
+    #$connection = "DRIVER = $driver; SERVER=$server; DATABASE=$database";
     
    /* $con = odbc_connect($connection,$user,$pass); //da gits nen error
 
@@ -28,26 +28,20 @@
     $abteilung = $_POST['abteilung'];
     $berufsbezeichnung = $_POST['berufsbezeichnung'];
     $berufsbeschreibung = $_POST['berufsbeschreibung'];
-    $conn = new mysqli($server, 
-    $user, $pass, $database);
+    $con = mysqli_connect($server, $user, $pass, $database);
     
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " 
-        . $conn->connect_error);
-}
+    //check connection
+    if (mysqli_connect_error()) {
+        echo "Verbindung nicht möglich: ";
+      }
   
-$sqlquery = "INSERT INTO tbl_person VALUES 
-    ('$vorname', '$nachname', '$geburtsdatum','$ahvNr','$personalnr','1','1','1','1','1')"
-  
-if ($conn->query($sql) === TRUE) {
-    echo "record inserted successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
+    $sql = "INSERT INTO tbl_person VALUES 
+        ('1','$vorname', '$nachname', '$geburtsdatum','$ahvNr','$personalnr','1','1','1','1','1')";
 
-
-
-
+    if ($con->query($sql) === TRUE) {
+        echo "New record created successfully";
+      } else {
+        echo "Error: " . $sql . "<br>" . $con->error;
+      }
 
 ?>
