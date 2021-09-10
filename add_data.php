@@ -3,20 +3,7 @@
     $pass = "";
     $server = "localhost:3307";
     $database = "db_m151";
-   # $driver = "MySQL ODBC 8.0 Unicode Driver";
-    #$connection = "DRIVER = $driver; SERVER=$server; DATABASE=$database";
-    
-   /* $con = odbc_connect($connection,$user,$pass); //da gits nen error
-
-    zum teste ob connection funktioniert
-    if($con)
-    {
-        echo "it works!";
-    }
-    else{
-
-        die("error!");
-    }
+  
 */
     $nachname = $_POST['nachname'];
     $vorname = $_POST['vorname'];
